@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html><body>
+<h2>🔑 Enter Request Token</h2>
+<form method="post">
+    <input name="request_token" placeholder="Paste request_token here" required>
+    <button type="submit">Generate Access Token</button>
+</form>
+{% if access_token %}
+<p><b>Access Token:</b> {{ access_token }}</p>
+{% endif %}
+</body></html>
