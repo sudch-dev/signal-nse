@@ -1,11 +1,107 @@
 <!DOCTYPE html>
-<html><body>
+<html>
+<body>
 <h2>📈 NSE Live Signals</h2>
 <form method="post">
     <select name="symbol">
         {% for s in symbols %}
         <option value="{{ s }}">{{ s }}</option>
         {% endfor %}
+        <option value="RELIANCE">RELIANCE</option>
+        <option value="TCS">TCS</option>
+        <option value="INFY">INFY</option>
+        <option value="HDFCBANK">HDFCBANK</option>
+        <option value="ICICIBANK">ICICIBANK</option>
+        <option value="SBIN">SBIN</option>
+        <option value="HINDUNILVR">HINDUNILVR</option>
+        <option value="LT">LT</option>
+        <option value="AXISBANK">AXISBANK</option>
+        <option value="KOTAKBANK">KOTAKBANK</option>
+        <option value="ITC">ITC</option>
+        <option value="BHARTIARTL">BHARTIARTL</option>
+        <option value="BAJFINANCE">BAJFINANCE</option>
+        <option value="HCLTECH">HCLTECH</option>
+        <option value="WIPRO">WIPRO</option>
+        <option value="ASIANPAINT">ASIANPAINT</option>
+        <option value="ULTRACEMCO">ULTRACEMCO</option>
+        <option value="NESTLEIND">NESTLEIND</option>
+        <option value="MARUTI">MARUTI</option>
+        <option value="SUNPHARMA">SUNPHARMA</option>
+        <option value="TITAN">TITAN</option>
+        <option value="BAJAJFINSV">BAJAJFINSV</option>
+        <option value="ONGC">ONGC</option>
+        <option value="TATAMOTORS">TATAMOTORS</option>
+        <option value="NTPC">NTPC</option>
+        <option value="ADANIENT">ADANIENT</option>
+        <option value="ADANIPORTS">ADANIPORTS</option>
+        <option value="COALINDIA">COALINDIA</option>
+        <option value="HINDALCO">HINDALCO</option>
+        <option value="TECHM">TECHM</option>
+        <option value="POWERGRID">POWERGRID</option>
+        <option value="GRASIM">GRASIM</option>
+        <option value="JSWSTEEL">JSWSTEEL</option>
+        <option value="BAJAJ-AUTO">BAJAJ-AUTO</option>
+        <option value="DRREDDY">DRREDDY</option>
+        <option value="CIPLA">CIPLA</option>
+        <option value="BPCL">BPCL</option>
+        <option value="DIVISLAB">DIVISLAB</option>
+        <option value="BRITANNIA">BRITANNIA</option>
+        <option value="TATACONSUM">TATACONSUM</option>
+        <option value="SHREECEM">SHREECEM</option>
+        <option value="EICHERMOT">EICHERMOT</option>
+        <option value="INDUSINDBK">INDUSINDBK</option>
+        <option value="SBILIFE">SBILIFE</option>
+        <option value="HEROMOTOCO">HEROMOTOCO</option>
+        <option value="HDFCLIFE">HDFCLIFE</option>
+        <option value="ICICIPRULI">ICICIPRULI</option>
+        <option value="TATASTEEL">TATASTEEL</option>
+        <option value="M&M">M&M</option>
+        <option value="APOLLOHOSP">APOLLOHOSP</option>
+        <option value="DLF">DLF</option>
+        <option value="AMBUJACEM">AMBUJACEM</option>
+        <option value="UPL">UPL</option>
+        <option value="PIDILITIND">PIDILITIND</option>
+        <option value="HAVELLS">HAVELLS</option>
+        <option value="GODREJCP">GODREJCP</option>
+        <option value="VEDL">VEDL</option>
+        <option value="SIEMENS">SIEMENS</option>
+        <option value="BEL">BEL</option>
+        <option value="TATAPOWER">TATAPOWER</option>
+        <option value="LUPIN">LUPIN</option>
+        <option value="TRENT">TRENT</option>
+        <option value="IRCTC">IRCTC</option>
+        <option value="ZOMATO">ZOMATO</option>
+        <option value="DMART">DMART</option>
+        <option value="NYKAA">NYKAA</option>
+        <option value="LICI">LICI</option>
+        <option value="INDIGO">INDIGO</option>
+        <option value="ADANIGREEN">ADANIGREEN</option>
+        <option value="ADANITRANS">ADANITRANS</option>
+        <option value="GAIL">GAIL</option>
+        <option value="ACC">ACC</option>
+        <option value="BOSCHLTD">BOSCHLTD</option>
+        <option value="COLPAL">COLPAL</option>
+        <option value="DABUR">DABUR</option>
+        <option value="BIOCON">BIOCON</option>
+        <option value="NAUKRI">NAUKRI</option>
+        <option value="ICICIGI">ICICIGI</option>
+        <option value="PGHH">PGHH</option>
+        <option value="MUTHOOTFIN">MUTHOOTFIN</option>
+        <option value="BANDHANBNK">BANDHANBNK</option>
+        <option value="ABFRL">ABFRL</option>
+        <option value="AUBANK">AUBANK</option>
+        <option value="MFSL">MFSL</option>
+        <option value="CHOLAFIN">CHOLAFIN</option>
+        <option value="SRF">SRF</option>
+        <option value="INDIAMART">INDIAMART</option>
+        <option value="BANKBARODA">BANKBARODA</option>
+        <option value="CANBK">CANBK</option>
+        <option value="PNB">PNB</option>
+        <option value="IDFCFIRSTB">IDFCFIRSTB</option>
+        <option value="FEDERALBNK">FEDERALBNK</option>
+        <option value="YESBANK">YESBANK</option>
+        <option value="UNIONBANK">UNIONBANK</option>
+        <option value="IEX">IEX</option>
     </select>
     <button type="submit">Get Signal</button>
 </form>
@@ -14,4 +110,5 @@
 <b>Volume:</b> {{ data['volume'] }}<br>
 <b>Signal:</b> {{ data['signal'] }}</p>
 {% endif %}
-</body></html>
+</body>
+</html>
