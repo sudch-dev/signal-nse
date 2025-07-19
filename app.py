@@ -6,8 +6,7 @@ import os
 app = Flask(__name__)
 
 # Load access token
-with open("access_token.txt", "r") as f:
-    access_token = f.read().strip()
+access_token = os.environ.get("ACCESS_TOKEN")
 
 kite = KiteConnect(api_key=os.getenv("KITE_API_KEY"))
 kite.set_access_token(access_token)
