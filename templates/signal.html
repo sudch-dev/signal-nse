@@ -1,17 +1,21 @@
+
 <!DOCTYPE html>
-<html><body>
+<html>
+<head><title>NSE Live Signal</title></head>
+<body>
 <h2>📈 NSE Live Signals</h2>
 <form method="post">
     <select name="symbol">
         {% for s in symbols %}
-        <option value="{{ s }}" {% if s == selected_symbol %}selected{% endif %}>{{ s }}</option>
+            <option value="{{ s }}" {% if s == selected_symbol %}selected{% endif %}>{{ s }}</option>
         {% endfor %}
     </select>
     <button type="submit">Get Signal</button>
 </form>
 {% if data %}
-<p><b>Price:</b> ₹{{ data['price'] }}<br>
-<b>Volume:</b> {{ data['volume'] }}<br>
-<b>Signal:</b> {{ data['signal'] }}</p>
+    <p><b>Price:</b> ₹{{ data['price'] }}<br>
+    <b>Volume:</b> {{ data['volume'] }}<br>
+    <b>Signal:</b> {{ data['signal'] }}</p>
 {% endif %}
-</body></html>
+</body>
+</html>
