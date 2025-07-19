@@ -50,9 +50,11 @@ def signal():
     kite.set_access_token(access_token)
 
     data = None
+    symbol = None
     if request.method == "POST":
-        symbol = request.form["symbol"]
-        try:
+    symbol = request.form["symbol"]
+
+    try:
             quote = kite.quote(f"NSE:{symbol}")
             price = quote[f"NSE:{symbol}"]["last_price"]
             volume = quote[f"NSE:{symbol}"].get("volume_traded") or quote[f"NSE:{symbol}"].get("volume")
@@ -65,7 +67,7 @@ def signal():
         except Exception as e:
             data = {"price": "-", "volume": "-", "signal": f"Error: {str(e)}"}
 
-    return render_template("signal.html", symbols=nse_100_symbols, data=data)
+return render_template("signal.html", symbols=nse_100_symbols, data=data, selected_symbol=symbol)
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 10000)))
