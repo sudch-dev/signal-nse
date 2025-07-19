@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html><body>
 <h2>📈 NSE Live Signals</h2>
-<form method="post" action="/signal">
+<form method="post">
     <select name="symbol">
         {% for s in symbols %}
         <option value="{{ s }}">{{ s }}</option>
@@ -10,7 +10,7 @@
     <button type="submit">Get Signal</button>
 </form>
 {% if data %}
-<p><b>Price:</b> {{ data['price'] }}<br>
+<p><b>Price:</b> ₹{{ data['price'] }}<br>
 <b>Volume:</b> {{ data['volume'] }}<br>
 <b>Signal:</b> {{ data['signal'] }}</p>
 {% endif %}
