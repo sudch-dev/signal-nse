@@ -2,4 +2,3 @@ flask
 python-dotenv
 kiteconnect
 gunicorn
-access_token
