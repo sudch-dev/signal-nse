@@ -46,11 +46,12 @@ def signal():
             quote = kite.quote(f"NSE:{selected_symbol}")
             price = quote[f"NSE:{selected_symbol}"]["last_price"]
             volume = quote[f"NSE:{selected_symbol}"].get("volume_traded") or quote[f"NSE:{selected_symbol}"].get("volume")
-            signal_text = {
-    "Buy" if price % 2 == 0 and volume % 2 == 0 else
-    "Sell" if price % 2 != 0 and volume % 2 != 0 else
-    "Hold"
-            }
+            signal_text = "Buy" if price % 2 == 0 else "Sell"
+            data = {
+                "price": f"{price:,.2f}",
+                "volume": f"{volume:,}",
+                "signal": signal_text }
+
 
 data = {
     "price": f"{price:,.2f}",
