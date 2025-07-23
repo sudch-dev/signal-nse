@@ -50,9 +50,8 @@ def signal():
             data = {
                 "price": f"{price:,.2f}",
                 "volume": f"{volume:,}",
-                "signal": signal_text }
-
-
+                "signal": signal_text 
+            }
 data = {
     "price": f"{price:,.2f}",
     "volume": f"{volume:,}",
