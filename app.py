@@ -47,10 +47,16 @@ def signal():
             price = quote[f"NSE:{selected_symbol}"]["last_price"]
             volume = quote[f"NSE:{selected_symbol}"].get("volume_traded") or quote[f"NSE:{selected_symbol}"].get("volume")
             signal_text = {
-    "Buy" if price > previous_price and volume > 1.5 * avg_volume and rsi > 55
-    else "Sell" if price < previous_price and volume > 1.5 * avg_volume and rsi < 45
-    else "Hold"
+    "Buy" if price % 2 == 0 and volume % 2 == 0 else
+    "Sell" if price % 2 != 0 and volume % 2 != 0 else
+    "Hold"
             }
+
+data = {
+    "price": f"{price:,.2f}",
+    "volume": f"{volume:,}",
+    "signal": signal_text
+}
         except Exception as e:
             data = {
                 "price": "-",
